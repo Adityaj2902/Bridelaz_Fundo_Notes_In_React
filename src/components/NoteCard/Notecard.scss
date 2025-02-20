@@ -1,0 +1,36 @@
+.user-card {
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 16px;
+  width: 200px;
+  height: 200px;
+  transition: box-shadow 0.3s ease;
+  position: relative;
+
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    .icons {
+      display: flex;
+    }
+  }
+
+  .user-info {
+    margin-bottom: 90px;
+  }
+
+  .icons {
+    display: none; // Hide icons by default
+    justify-content: space-between;
+
+    i {
+      cursor: pointer;
+      opacity: 0.6;
+      transition: opacity 0.2s;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
