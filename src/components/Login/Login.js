@@ -22,6 +22,8 @@ const Login = ()=> {
         loginApiCall(payload)
             .then(data => {
                 console.log("Login successful:", data);
+                // localStorage.setItem('token', data.token.token);
+                navigate('/notes');
             })
             .catch(error => {
                 console.error("Login error:", error);

@@ -1,17 +1,21 @@
 // src/Note.scss
 
-.note-container {
+.AddNote-note-container {
   border: 1px solid #e0e0e0;
   border-radius: 8px;
-  padding: 16px;
+  padding: 26px;
   width: 500px;
   background-color: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
+  margin-top: 300px;
+  margin-left:550px;
 
-  .title-input,
-  .note-input {
+  position: relative;
+
+  .AddNote-title-input,
+  .AddNote-note-input {
     border: none;
     width: 100%;
     margin-bottom: 8px;
@@ -19,7 +23,7 @@
     outline: none;
   }
 
-  .title-input {
+  .AddNote-title-input {
     font-weight: bold;
   }
 
@@ -27,20 +31,20 @@
     height: 100px;
   }
 
-  .action-buttons {
+  .AddNote-action-buttons {
     display: flex;
     gap: 8px;
     margin-bottom: 8px;
   }
 
-  .icon-button {
+  .AddNote-icon-button {
     border: none;
     background: none;
     cursor: pointer;
     font-size: 24px;
   }
 
-  .close-button {
+  .AddNote-close-button {
     align-self: flex-end;
     border: none;
     background: #e57373;
