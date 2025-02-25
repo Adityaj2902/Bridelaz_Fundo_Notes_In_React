@@ -56,3 +56,11 @@ export const storeNoteApiCall = (noteData) => {
       throw error;
     });
 };
+
+export const fetchNotesApiCall = (token) => {
+  return axios.get(`${BASE_URL_NOTE}/`, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+};

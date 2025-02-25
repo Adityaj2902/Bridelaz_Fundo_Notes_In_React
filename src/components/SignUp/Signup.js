@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Button from '@mui/material/Button';
-import '../SignUp/Signup.scss'; // Import the CSS file
+import './Signup.scss'; // Import the CSS file
 import sideImage from './sideimage.png';
 import { signupApiCall } from '../../utils/Api'; // Import the signupApiCall function
 

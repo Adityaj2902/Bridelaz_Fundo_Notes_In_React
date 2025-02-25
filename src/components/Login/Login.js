@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
-import '../Login/Login.scss';
+import './Login.scss';
 import { loginApiCall } from '../../utils/Api'; // Import the loginApiCall function
 
 const Login = ()=> {
@@ -23,7 +23,7 @@ const Login = ()=> {
             .then(data => {
                 console.log("Login successful:", data);
                 // localStorage.setItem('token', data.token.token);
-                navigate('/notes');
+                navigate('/dashboard');
             })
             .catch(error => {
                 console.error("Login error:", error);

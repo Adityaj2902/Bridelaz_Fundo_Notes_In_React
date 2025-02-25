@@ -1,10 +1,9 @@
 import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Login from './components/Login/Login';
-import SignUp from './components/SignUp/Signup';
-import AddNote from './components/AddNote/AddNote'; 
-import NoteCard from './components/NoteCard/NoteCard';
-
+import Login from './components/login/Login';
+import SignUp from './components/signup/Signup';
+import Dashboard from './components/dashboard/Dashbord';
+import AddNote from './components/addnote/AddNote';
 
 export default function RoutingModule() {
     const routes = createBrowserRouter([
@@ -17,12 +16,14 @@ export default function RoutingModule() {
             element: <SignUp />
         },
         {
-            path: '/notes',
-            element: <AddNote />
-        },
-        {
-            path:'/noteCard',
-            element: <NoteCard />
+            path: '/dashboard',
+            element: <Dashboard />,
+            children: [
+                {
+                    path: 'addnote',
+                    element: <AddNote />
+                }
+            ]
         }
     ]);
 
