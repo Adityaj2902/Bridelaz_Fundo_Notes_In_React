@@ -36,25 +36,12 @@ export const signupApiCall = (payload) => {
     });
 };
 
-export const storeNoteApiCall = (noteData) => {
-  const token=localStorage.getItem('token');
-  console.log(token);
-  return axios.post(`${BASE_URL_NOTE}/`, noteData, {
+export const saveNoteApiCall = (token, noteData) => {
+  return axios.post(`${BASE_URL_NOTE}`, noteData, {
     headers: {
-      Authorization: `Bearer ${token}`
-    }
-  })
-    .then(response => {
-      // Handle success
-      console.log("Note stored successfully:", response.data);
-      localStorage.setItem('note', JSON.stringify(response.data));
-      return response.data;
-    })
-    .catch(error => {
-      // Handle error
-      console.error("Error storing note:", error);
-      throw error;
-    });
+      Authorization: `Bearer ${token}`,
+    },
+  });
 };
 
 export const fetchNotesApiCall = (token) => {
@@ -64,3 +51,12 @@ export const fetchNotesApiCall = (token) => {
     },
   });
 };
+
+
+export const moveToTrashApiCall = (token,id) => {
+  return axios.put(`${BASE_URL_NOTE}/${id}/trash`,'', {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+}

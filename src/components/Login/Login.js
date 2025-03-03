@@ -23,7 +23,7 @@ const Login = ()=> {
             .then(data => {
                 console.log("Login successful:", data);
                 // localStorage.setItem('token', data.token.token);
-                navigate('/dashboard');
+                navigate('/dashboard/addNote');
             })
             .catch(error => {
                 console.error("Login error:", error);
@@ -38,18 +38,18 @@ const Login = ()=> {
                 <p className="Login-description">Use your Fundoo Account</p>
                 <form className="Login-form">
                     <TextField 
-                        id="outlined-basic" 
+                        id="standard-basic" 
                         onChange={(e) => email = e.target.value} 
                         label="Email or phone*" 
-                        variant="outlined" 
+                        className="no-outline"
                     />
                     <br/>
                     <TextField 
-                        id="outlined-basic" 
+                        id="standard-basic" 
                         onChange={(e) => password = e.target.value} 
                         label="Password*" 
-                        variant="outlined" 
                         type="password"
+                        className="no-outline"
                     />
                     <br/>
                     <div className="Login-links">

@@ -55,17 +55,17 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
   })
 );
 
-function Sidenav() {
+function Sidenav({open}) {
 //   const theme = useTheme();
-  const [open, setOpen] = React.useState(false);
+  // const [open, setOpen] = React.useState(false);
 
-  const handleDrawer = () => {
-    setOpen((prevState) => !prevState);
-  };
+  // const handleDrawer = () => {
+  //   setOpen((prevState) => !prevState);
+  // };
 
   return (
-    <Box sx={{ display: 'flex' }}>
-      <HeaderBar open={open} handleDrawer={handleDrawer} />
+    <Box sx={{ display: 'flex', border: '1px solid black'}}>
+      {/* <HeaderBar open={open} handleDrawer={handleDrawer} sx={{border: '3px solid green'}}/> */}
       <Drawer variant="permanent" open={open}>
         <DrawerHeader />
         <NavList />
